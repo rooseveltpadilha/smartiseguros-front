@@ -35,23 +35,6 @@ export default class Main extends Component {
             <p>Os melhores profissionais do mercado</p>
           </div>
         </Letreiro>
-        <Video>
-          <div>
-            <Testemunial>
-              <p>
-
-              </p>
-              <span>
-                <img src={ProfileImage} alt="profile-photo" />
-                <p>Gabriel Santos</p>
-                <p>assegurado, 26 anos.</p>
-              </span>
-            </Testemunial>
-            <VideoContent>
-              <img src={VideoImage} alt="video-photo" />
-            </VideoContent>
-          </div>
-        </Video>
       </>
     );
   }
