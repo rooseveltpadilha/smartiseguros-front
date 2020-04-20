@@ -3,7 +3,7 @@ import img from '../../assets/img/background.jpg';
 import media from 'styled-media-query';
 
 export const Header = styled.div`
-  weight: 100vw;
+  width: 100vw;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 `;
 
@@ -68,12 +68,12 @@ export const Banner = styled.div`
       margin-left: 0px;
       margin-top: 352px;
       ${media.lessThan("medium")`
-         width: 500px;
+         width: 410px;
       `}
         p {
           font-size: 55px;
             ${media.lessThan("medium")`
-              font-size: 40px;
+              font-size: 32px;
             `}
         }
         a {
@@ -89,7 +89,8 @@ export const Banner = styled.div`
           text-decoration: none;
           text-align: center;
           ${media.lessThan("medium")`
-             width: 465px;
+             width: 365px;
+             padding-top: 15px;
         `}
         }
         a:hover {
@@ -99,50 +100,38 @@ export const Banner = styled.div`
       }
   }
 `
-export const Letreiro = styled.div`
-  width: 100%;
-  height: 250px;
-  background: #fff;
-  div {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-    ${media.lessThan("medium")`
-        width: 465px;
-    `}
-    p {
-      color: #000;
-      font-family: 'Rubik', sans-serif;
-      margin: 0px auto;
-    }
-    p:first-child {
-      margin-top: 80px;
-      font-size: 26px;
-      ${media.lessThan("medium")`
-        font-size: 26px;
-      `}
-    }
-    p:nth-child(2) {
-      margin-top: 12px;
-      font-size: 41px;
-      ${media.lessThan("medium")`
-      font-size: 26px;
-      `}
-    }
-  }
-`
 
 export const Video = styled.div`
   background-color: #EDEDED;
 
-  div {
+
+  div:nth-child(2) {
     display: flex;
     max-width: 1200px;
-    min-height: 280px;
     margin: 0 auto;
-    padding: 0px 0px;
+    min-height: 300px;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+
+    iframe {
+      height: 630px !important;
+      width: 630px !important;
+      ${media.lessThan("small")`
+      position: relative;
+      top: -165px;
+        `}
+    }
+  }
+
+  div:first-child {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 300px;
+    padding: 40px 0px;
     flex-wrap: wrap;
     justify-content: space-around;
     ${media.lessThan("large")`
@@ -151,10 +140,10 @@ export const Video = styled.div`
 
       div {
         display: flex;
-        width: 500px;
-        height: 200px;
-        margin: 20px 10px;
+        height: 100px;
+        margin: 5px 10px;
         padding: 0px 5px;
+        width: 380px;
         align-content: center;
         ${media.lessThan("large")`
         margin: 20px 0px 0px 20px;
@@ -168,9 +157,9 @@ export const Video = styled.div`
 
         span:first-child {
           font-family: 'Rubik', sans-serif;
-          font-size: 26px;
+          font-size: 20px;
           text-align: right;
-          padding: 50px 20px 3px 10px;
+          padding: 20px 20px 10px 10px;
           color: #000000;
         }
 
@@ -185,7 +174,7 @@ export const Video = styled.div`
             height: 100px;
             width: 100px;
             margin-left: 40px;
-            margin-top: 0px;
+            margin-top: 20px;
             margin-bottom: 70px;
           }
 
@@ -196,7 +185,7 @@ export const Video = styled.div`
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
-            padding-right: 20px;
+            padding-right: 50px;
             margin-bottom: 10px;
 
             p {
@@ -204,7 +193,7 @@ export const Video = styled.div`
             }
 
             p:first-child {
-              font-size: 31px;
+              font-size: 26px;
             }
 
             p:nth-child(2) {

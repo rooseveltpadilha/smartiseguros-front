@@ -10,7 +10,7 @@ export const Encontre = styled.div`
     flex-direction: row;
     align-items: center;
     padding-top: 40px;
-    margin: 0 auto;
+    margin:50px auto;
 
       p {
         max-width: 1000px;
@@ -22,13 +22,14 @@ export const Encontre = styled.div`
         padding: 16px;
       ${media.lessThan("large")`
         font-size: 26px;
-        margin: 0px auto;
+        margin: 10px auto;
       `}
 
       }
     }
   }
 `
+
 
 export const Corretor = styled.div`
   div {
@@ -43,7 +44,7 @@ export const Corretor = styled.div`
       div {
         display: flex;
         flex-direction: column;
-        padding: 0 10px;
+        padding: 10px 10px;
 
         img {
           width: 230px;

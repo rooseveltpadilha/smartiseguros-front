@@ -18,6 +18,7 @@ export const Footer = styled.div`
       }
       img {
         margin-top: 8px;
+        margin-right: 30px;
       }
   }
 `

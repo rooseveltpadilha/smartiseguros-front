@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Banner, Letreiro, Video } from './styles.js'
+import { Banner, Video } from './styles.js'
 import DivHeader from '../../Components/Header/index'
 import ProfileImage from '../../assets/img/user-profile.png'
 import DivFooter from '../../Components/Footer'
@@ -24,12 +24,6 @@ export default class Main extends Component {
             </span>
           </div>
         </Banner >
-        <Letreiro>
-          <div>
-            <p>Aqui você encontrará:</p>
-            <p>Os melhores profissionais do mercado</p>
-          </div>
-        </Letreiro>
         <Video>
           <div>
             <div>
@@ -45,7 +39,7 @@ export default class Main extends Component {
               </span>
             </div>
             <div>
-              <iframe src="https://player.vimeo.com/video/409687013" width="800" height="500" frameborder="0" allow="autoplay; fullscreen" title="vimeo-video" allowfullscreen />
+              <iframe src="https://player.vimeo.com/video/409687013" frameborder="0" allow="autoplay; fullscreen" title="vimeo-video" allowfullscreen />
             </div>
           </div>
         </Video>

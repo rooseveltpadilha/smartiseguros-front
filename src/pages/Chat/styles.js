@@ -24,7 +24,7 @@ export const Letreiro = styled.div`
     flex-direction: column;
     align-items: center;
     ${media.lessThan("medium")`
-        width: 465px;
+        width: 365px;
     `}
     p {
       color: #000;
@@ -35,14 +35,14 @@ export const Letreiro = styled.div`
       margin-top: 30px;
       font-size: 26px;
       ${media.lessThan("medium")`
-        font-size: 26px;
+        font-size: 16px;
       `}
     }
     p:nth-child(2) {
       margin-top: 12px;
       font-size: 41px;
       ${media.lessThan("medium")`
-      font-size: 26px;
+      font-size: 23px;
       `}
     }
   }
