@@ -8,7 +8,7 @@ export default class DivFooter extends Component {
       <Footer>
         <div>
           <img src={LogoWhite} alt="" height="40" />
-          <p>Todos direitos reservados - 2020</p>
+          <p>© Todos direitos reservados - Equipe 25 - Hackaton Gr1d - 2020</p>
         </div>
       </Footer>
     )
