@@ -142,7 +142,7 @@ export const Video = styled.div`
     max-width: 1200px;
     min-height: 280px;
     margin: 0 auto;
-    padding: 30px 0px;
+    padding: 0px 0px;
     flex-wrap: wrap;
     justify-content: space-around;
     ${media.lessThan("large")`
@@ -157,8 +157,8 @@ export const Video = styled.div`
         padding: 0px 5px;
         align-content: center;
         ${media.lessThan("large")`
-        margin: 20px 5px 0px 20px;
-        padding: 5px 0px;
+        margin: 20px 0px 0px 20px;
+        padding: 0px 20px;
       `}
       }
 
