@@ -4,7 +4,8 @@ import DivFooter from '../../Components/Footer'
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import { DivContent } from './styles'
+import { DivContent, Letreiro } from './styles'
+import EncontreDiv from '../../Components/Encontre'
 
 import '../../assets/css/fonts.css'
 
@@ -25,6 +26,12 @@ export default class Main extends Component {
     return (
       <>
         <DivHeader />
+        <Letreiro>
+          <div>
+            <p>Encontre o plano ideal para você</p>
+            <p>Converse conosco agora mesmo</p>
+          </div>
+        </Letreiro>
         <DivContent>
           <ThemeProvider theme={theme}>
             <ChatBot
@@ -138,6 +145,7 @@ export default class Main extends Component {
             />
           </ThemeProvider>
         </DivContent>
+        <EncontreDiv />
         <DivFooter />
       </>
     );
