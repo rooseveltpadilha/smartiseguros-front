@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Banner, Letreiro, Video } from './styles.js'
 import DivHeader from '../../Components/Header/index'
 import ProfileImage from '../../assets/img/user-profile.png'
-import VideoImage from '../../assets/img/video.png'
 import DivFooter from '../../Components/Footer'
 import EncontreDiv from '../../Components/Encontre'
 
@@ -46,7 +45,7 @@ export default class Main extends Component {
               </span>
             </div>
             <div>
-              <img src={VideoImage} alt="" height="280" width="500" />
+              <iframe src="https://player.vimeo.com/video/409687013" width="800" height="500" frameborder="0" allow="autoplay; fullscreen" title="vimeo-video" allowfullscreen />
             </div>
           </div>
         </Video>

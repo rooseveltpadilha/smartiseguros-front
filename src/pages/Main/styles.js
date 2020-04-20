@@ -140,20 +140,26 @@ export const Video = styled.div`
   div {
     display: flex;
     max-width: 1200px;
+    min-height: 280px;
     margin: 0 auto;
+    padding: 30px 0px;
     flex-wrap: wrap;
-    justify-content: space-between;
-    min-height: 300px;
+    justify-content: space-around;
     ${media.lessThan("large")`
     justify-content: center;
     `}
 
       div {
         display: flex;
-        width: 490px;
-        min-height: 260px;
-        margin: 40px 20px;
+        width: 500px;
+        height: 200px;
+        margin: 20px 10px;
+        padding: 0px 5px;
         align-content: center;
+        ${media.lessThan("large")`
+        margin: 20px 5px 0px 20px;
+        padding: 5px 0px;
+      `}
       }
 
       div:nth-child(1) {
@@ -164,7 +170,7 @@ export const Video = styled.div`
           font-family: 'Rubik', sans-serif;
           font-size: 26px;
           text-align: right;
-          padding: 50px 40px 30px 40px;
+          padding: 50px 20px 3px 10px;
           color: #000000;
         }
 
@@ -176,20 +182,22 @@ export const Video = styled.div`
 
 
           img {
-            height: 150px;
-            width: 150px;
-            margin-bottom: 50px;
-            margin-left: 50px;
+            height: 100px;
+            width: 100px;
+            margin-left: 40px;
+            margin-top: 0px;
+            margin-bottom: 70px;
           }
 
           span {
             width: 250px;
-            height: 150px;
+            height: 120px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
-            padding-right: 40px;
+            padding-right: 20px;
+            margin-bottom: 10px;
 
             p {
               font-family: 'Rubik', sans-serif;
@@ -210,4 +218,5 @@ export const Video = styled.div`
       }
   }
 `
+
 
