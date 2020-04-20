@@ -5,6 +5,7 @@ import Corretor1 from '../../assets/img/corretores/corretor-1.png'
 import Corretor2 from '../../assets/img/corretores/corretor-2.png'
 import Corretor3 from '../../assets/img/corretores/corretor-3.png'
 import { FaStar } from 'react-icons/fa'
+import ReactTypingEffect from 'react-typing-effect';
 
 
 
@@ -15,9 +16,9 @@ export default class EncontreDiv extends Component {
       <>
         <Encontre>
           <div>
-            <p>Encontre e avalie os profissionais mais próximos
-
-          </p>
+            <p>
+              <ReactTypingEffect text={["Encontre os melhores profissionais do mercado", "Veja o perfil e avaliação dos profissionais", "Contrate seguros com confiança e conforto"]} speed="20" eraseDelay="2000" typingDelay="1000" />
+            </p>
           </div>
         </Encontre>
         <Corretor>
