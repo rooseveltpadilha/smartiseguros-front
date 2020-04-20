@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { Header, HeaderContent, Banner, Letreiro, Video, Encontre, Corretor, Footer } from './styles.js'
-import Logo from '../../assets/img/logo.png'
+import { Banner, Letreiro, Video, Encontre, Corretor } from './styles.js'
+import DivHeader from '../../Components/Header/index'
 import ProfileImage from '../../assets/img/user-profile.png'
 import VideoImage from '../../assets/img/video.png'
-import LogoWhite from '../../assets/img/logo-white.png'
 import Corretor1 from '../../assets/img/corretores/corretor-1.png'
 import Corretor2 from '../../assets/img/corretores/corretor-2.png'
 import Corretor3 from '../../assets/img/corretores/corretor-3.png'
 import { FaStar } from 'react-icons/fa'
+import DivFooter from '../../Components/Footer'
 
 import '../../assets/css/fonts.css'
 
@@ -15,15 +15,7 @@ export default class Main extends Component {
   render() {
     return (
       <>
-        <Header>
-          <HeaderContent>
-            <img src={Logo} alt="logo" />
-            <ul>
-              <a href="/"><li href="#">início</li></a>
-              <a href="/chat"><li href="#">iniciar o chat</li></a>
-            </ul>
-          </HeaderContent>
-        </Header >
+        <DivHeader />
         <Banner>
           <div>
             <span>
@@ -105,12 +97,7 @@ export default class Main extends Component {
             </div>
           </div>
         </Corretor>
-        <Footer>
-          <div>
-            <img src={LogoWhite} alt="" height="40" />
-            <p>Todos direitos reservados - 2020</p>
-          </div>
-        </Footer>
+        <DivFooter />
       </>
     );
   }

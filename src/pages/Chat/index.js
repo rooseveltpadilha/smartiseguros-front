@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Header, HeaderContent } from './styles.js'
-import Logo from '../../assets/img/logo.png'
+import DivHeader from '../../Components/Header/index'
+import DivFooter from '../../Components/Footer'
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
+import { DivContent } from './styles'
 
 import '../../assets/css/fonts.css'
 
@@ -23,127 +24,121 @@ export default class Main extends Component {
   render() {
     return (
       <>
-        <Header>
-          <HeaderContent>
-            <img src={Logo} alt="logo" />
-            <ul>
-              <a href="/"><li href="#">início</li></a>
-              <a href="/chat"><li href="#">chat</li></a>
-            </ul>
-          </HeaderContent>
-        </Header >
-        <ThemeProvider theme={theme}>
-          <ChatBot
-            steps={[
-              {
-                id: '1',
-                message: 'Qual seu nome?',
-                trigger: 'nome',
-              },
-              {
-                id: 'nome',
-                user: true,
-                trigger: '2',
-              },
-              {
-                id: '2',
-                message: 'Vou fazer algumas perguntas para te conhecer melhor...',
-                trigger: 'viajar-pergunta',
-              },
-              {
-                id: 'viajar-pergunta',
-                message: 'Você costuma viajar com frequência?',
-                trigger: 'viajar',
-              },
-              {
-                id: 'viajar',
-                options: [
-                  { value: true, label: 'Sim', trigger: 'carro-pergunta' },
-                  { value: false, label: 'Não', trigger: 'carro-pergunta' },
-                ],
-              },
-              {
-                id: 'carro-pergunta',
-                message: 'Tem carro? Se sim, está insatisfeito?',
-                trigger: 'carro',
-              },
-              {
-                id: 'carro',
-                options: [
-                  { value: true, label: 'Sim', trigger: 'bicicleta-pergunta' },
-                  { value: false, label: 'Não', trigger: 'bicicleta-pergunta' },
-                  { value: false, label: 'Não tenho carro', trigger: 'bicicleta-pergunta' },
-                ],
-              },
-              {
-                id: 'bicicleta-pergunta',
-                message: 'Tem uma bicicleta para chamar de "meu amor"?',
-                trigger: 'bicicleta',
-              },
-              {
-                id: 'bicicleta',
-                options: [
-                  { value: true, label: 'Sim', trigger: 'saude-odonto-pergunta' },
-                  { value: false, label: 'Não', trigger: 'saude-odonto-pergunta' },
-                ],
-              },
-              {
-                id: 'saude-odonto-pergunta',
-                message: 'Tem interesse ou está insatisfeito com seu plano de saúde ou dental😄?',
-                trigger: 'saude-odonto',
-              },
-              {
-                id: 'saude-odonto',
-                options: [
-                  { label: 'Sim', trigger: 'saudeOdontoEscolha-pergunta' },
-                  { label: 'Não', trigger: 'trabalho-pergunta' },
-                ]
-              },
-              {
-                id: 'saudeOdontoEscolha-pergunta',
-                message: 'Qual deles?',
-                trigger: 'saudeOdontoEscolha',
-              },
-              {
-                id: 'saudeOdontoEscolha',
-                options: [
-                  { value: 1, label: 'Saúde💪', trigger: 'trabalho-pergunta' },
-                  { value: 2, label: 'Dental😄', trigger: 'trabalho-pergunta' },
-                  { value: 3, label: 'Ambos', trigger: 'trabalho-pergunta' },
-                ],
-              },
-              {
-                id: 'trabalho-pergunta',
-                message: 'Por acaso seu trabalho envolve algum risco de saúde?',
-                trigger: 'trabalho',
-              },
-              {
-                id: 'trabalho',
-                options: [
-                  { value: true, label: 'Sim', trigger: 'residencial-pergunta' },
-                  { value: false, label: 'Não', trigger: 'residencial-pergunta' },
-                ]
-              },
-              {
-                id: 'residencial-pergunta',
-                message: 'Que tal proteger sua família e seu lar de acidentes?',
-                trigger: 'residencial',
-              },
-              {
-                id: 'residencial',
-                options: [
-                  { value: true, label: 'Eu topo!', trigger: 'recomendacao' },
-                  { value: false, label: 'Obrigado, já tenho seguro.', trigger: 'recomendacao' },
-                ]
-              },
-              {
-                id: 'recomendacao',
-                message: 'Obrigado pelo papo, logo mais o corretor entrar em contato! 🚀😍'
-              }
-            ]}
-          />
-        </ThemeProvider>
-
+        <DivHeader />
+        <DivContent>
+          <ThemeProvider theme={theme}>
+            <ChatBot
+              steps={[
+                {
+                  id: '1',
+                  message: 'Qual seu nome?',
+                  trigger: 'nome',
+                },
+                {
+                  id: 'nome',
+                  user: true,
+                  trigger: '2',
+                },
+                {
+                  id: '2',
+                  message: 'Vou fazer algumas perguntas para te conhecer melhor...',
+                  trigger: 'viajar-pergunta',
+                },
+                {
+                  id: 'viajar-pergunta',
+                  message: 'Você costuma viajar com frequência?',
+                  trigger: 'viajar',
+                },
+                {
+                  id: 'viajar',
+                  options: [
+                    { value: true, label: 'Sim', trigger: 'carro-pergunta' },
+                    { value: false, label: 'Não', trigger: 'carro-pergunta' },
+                  ],
+                },
+                {
+                  id: 'carro-pergunta',
+                  message: 'Tem carro? Se sim, está insatisfeito?',
+                  trigger: 'carro',
+                },
+                {
+                  id: 'carro',
+                  options: [
+                    { value: true, label: 'Sim', trigger: 'bicicleta-pergunta' },
+                    { value: false, label: 'Não', trigger: 'bicicleta-pergunta' },
+                    { value: false, label: 'Não tenho carro', trigger: 'bicicleta-pergunta' },
+                  ],
+                },
+                {
+                  id: 'bicicleta-pergunta',
+                  message: 'Tem uma bicicleta para chamar de "meu amor"?',
+                  trigger: 'bicicleta',
+                },
+                {
+                  id: 'bicicleta',
+                  options: [
+                    { value: true, label: 'Sim', trigger: 'saude-odonto-pergunta' },
+                    { value: false, label: 'Não', trigger: 'saude-odonto-pergunta' },
+                  ],
+                },
+                {
+                  id: 'saude-odonto-pergunta',
+                  message: 'Tem interesse ou está insatisfeito com seu plano de saúde ou dental😄?',
+                  trigger: 'saude-odonto',
+                },
+                {
+                  id: 'saude-odonto',
+                  options: [
+                    { label: 'Sim', trigger: 'saudeOdontoEscolha-pergunta' },
+                    { label: 'Não', trigger: 'trabalho-pergunta' },
+                  ]
+                },
+                {
+                  id: 'saudeOdontoEscolha-pergunta',
+                  message: 'Qual deles?',
+                  trigger: 'saudeOdontoEscolha',
+                },
+                {
+                  id: 'saudeOdontoEscolha',
+                  options: [
+                    { value: 1, label: 'Saúde💪', trigger: 'trabalho-pergunta' },
+                    { value: 2, label: 'Dental😄', trigger: 'trabalho-pergunta' },
+                    { value: 3, label: 'Ambos', trigger: 'trabalho-pergunta' },
+                  ],
+                },
+                {
+                  id: 'trabalho-pergunta',
+                  message: 'Por acaso seu trabalho envolve algum risco de saúde?',
+                  trigger: 'trabalho',
+                },
+                {
+                  id: 'trabalho',
+                  options: [
+                    { value: true, label: 'Sim', trigger: 'residencial-pergunta' },
+                    { value: false, label: 'Não', trigger: 'residencial-pergunta' },
+                  ]
+                },
+                {
+                  id: 'residencial-pergunta',
+                  message: 'Que tal proteger sua família e seu lar de acidentes?',
+                  trigger: 'residencial',
+                },
+                {
+                  id: 'residencial',
+                  options: [
+                    { value: true, label: 'Eu topo!', trigger: 'recomendacao' },
+                    { value: false, label: 'Obrigado, já tenho seguro.', trigger: 'recomendacao' },
+                  ]
+                },
+                {
+                  id: 'recomendacao',
+                  message: 'Obrigado pelo papo, logo mais o corretor entrar em contato! 🚀😍'
+                }
+              ]}
+            />
+          </ThemeProvider>
+        </DivContent>
+        <DivFooter />
       </>
     );
   }
