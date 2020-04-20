@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import img from '../../assets/img/background.jpg';
-import media from 'styled-media-query';
 
 export const Header = styled.div`
   weight: 100vw;

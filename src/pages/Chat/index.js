@@ -140,7 +140,7 @@ export default class Main extends Component {
                 id: 'recomendacao',
                 message: 'Obrigado pelo papo, logo mais o corretor entrar em contato! 🚀😍'
               }
-            ]} 
+            ]}
           />
         </ThemeProvider>
 
@@ -167,7 +167,7 @@ class Review extends Component {
       residencial: ''
     };
   }
-  
+
   resultado = []
 
   componentWillMount() {
@@ -180,10 +180,11 @@ class Review extends Component {
         'nome': 'Diversos seguros de viagem',
         'descricao': 'Despesas médico-hospitalares em viagem, invalidez permanente total por acidente, morte acidental em viagem...',
         'empresa': 'Seguro viagem',
-        'url': 'https://www.proteste.org.br/-/media/1,-d-,global-artwork/iilustration/seguro-viagem-01.svg?rev=95ae91fe-fa4d-4939-bed7-1bb858749b35&la=pt-BR&hash=503681E4D29121D724A2981941BB0CC3'} )
+        'url': 'https://www.proteste.org.br/-/media/1,-d-,global-artwork/iilustration/seguro-viagem-01.svg?rev=95ae91fe-fa4d-4939-bed7-1bb858749b35&la=pt-BR&hash=503681E4D29121D724A2981941BB0CC3'
+      })
     }
 
-  
+
 
     if (bicicleta.value) {
       this.resultado.concat({
@@ -194,7 +195,7 @@ class Review extends Component {
       })
     }
 
-    if (saudeOdontoEscolha.value == 1) {
+    if (saudeOdontoEscolha.value === 1) {
       this.resultado.concat({
         'nome': 'Plano de saúde',
         'descricao': 'Com ampla rede médica e os melhores hospitais, o plano Bradesco tem a melhor rede médica. Reembolso, exames, consultas, internações e cirurgias, tudo para manter você tranquilo.',
@@ -203,7 +204,7 @@ class Review extends Component {
       })
     }
 
-    if (saudeOdontoEscolha.value == 2) {
+    if (saudeOdontoEscolha.value === 2) {
       this.resultado.concat({
         'nome': 'Plano dental',
         'descricao': 'Atendimento como você merece. Os melhores planos e profissionais a um preço que cabe no seu bolso. Confira as vantagens de contar com Amil Dental.',
@@ -212,7 +213,7 @@ class Review extends Component {
       })
     }
 
-    if (saudeOdontoEscolha.value == 3) {
+    if (saudeOdontoEscolha.value === 3) {
       this.resultado.concat({
         'nome': 'Plano de saúde',
         'descricao': 'Com ampla rede médica e os melhores hospitais, o plano Bradesco tem a melhor rede médica. Reembolso, exames, consultas, internações e cirurgias, tudo para manter você tranquilo.',
@@ -266,9 +267,3 @@ Review.propTypes = {
 Review.defaultProps = {
   steps: undefined,
 };
-
-
-
-
-
-
