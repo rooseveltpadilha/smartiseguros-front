@@ -268,6 +268,17 @@ export const Corretor = styled.div`
             font-size: 24px;
             font-family: 'Rubik', sans-serif;
           }
+          span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            span {
+              font-size: 20px;
+              margin-left: 5px;
+            }
+          }
         }
 
       }

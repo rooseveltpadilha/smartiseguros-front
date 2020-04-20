@@ -7,6 +7,7 @@ import LogoWhite from '../../assets/img/logo-white.png'
 import Corretor1 from '../../assets/img/corretores/corretor-1.png'
 import Corretor2 from '../../assets/img/corretores/corretor-2.png'
 import Corretor3 from '../../assets/img/corretores/corretor-3.png'
+import { FaStar } from 'react-icons/fa'
 
 import '../../assets/css/fonts.css'
 
@@ -72,7 +73,8 @@ export default class Main extends Component {
               <span>
                 <p>Lucas Santana</p>
                 <span>
-                  <p>4.8</p>
+                  <FaStar />
+                  <span>5.0</span>
                 </span>
                 <p>Maceió - AL</p>
               </span>
@@ -83,7 +85,8 @@ export default class Main extends Component {
               <span>
                 <p>Iago Barbosa</p>
                 <span>
-                  <p>4.8</p>
+                  <FaStar />
+                  <span>4.8</span>
                 </span>
                 <p>Rio de Janeiro - RJ</p>
               </span>
@@ -94,7 +97,8 @@ export default class Main extends Component {
               <span>
                 <p>Caique Moreno</p>
                 <span>
-                  <p>4.8</p>
+                  <FaStar />
+                  <span>4.6</span>
                 </span>
                 <p>São José dos Campos - SP</p>
               </span>
