@@ -6,13 +6,18 @@ import Corretor2 from '../../assets/img/corretores/corretor-2.png'
 import Corretor3 from '../../assets/img/corretores/corretor-3.png'
 import { FaStar } from 'react-icons/fa'
 
+
+
 export default class EncontreDiv extends Component {
+
   render() {
     return (
       <>
         <Encontre>
           <div>
-            <p>Encontre e avalie os profissionais mais próximos</p>
+            <p>Encontre e avalie os profissionais mais próximos
+
+          </p>
           </div>
         </Encontre>
         <Corretor>

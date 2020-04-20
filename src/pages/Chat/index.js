@@ -38,7 +38,7 @@ export default class Main extends Component {
               steps={[
                 {
                   id: '1',
-                  message: 'Qual seu nome?',
+                  message: 'Olá, qual seu nome?',
                   trigger: 'nome',
                 },
                 {
@@ -49,15 +49,21 @@ export default class Main extends Component {
                 {
                   id: '2',
                   message: 'Vou fazer algumas perguntas para te conhecer melhor...',
-                  trigger: 'viajar-pergunta',
+                  trigger: 'tudo bem continuar',
                 },
                 {
-                  id: 'viajar-pergunta',
-                  message: 'Você costuma viajar com frequência?',
-                  trigger: 'viajar',
+                  id: 'tudo bem continuar',
+                  options: [
+                    { value: true, label: 'Tudo bem', trigger: 'pergunta-viagem' },
+                  ],
                 },
                 {
-                  id: 'viajar',
+                  id: 'pergunta-viagem',
+                  message: 'Gosta de viajar?',
+                  trigger: 'Gosta de viajar',
+                },
+                {
+                  id: 'Gosta de viajar',
                   options: [
                     { value: true, label: 'Sim', trigger: 'carro-pergunta' },
                     { value: false, label: 'Não', trigger: 'carro-pergunta' },
@@ -65,7 +71,7 @@ export default class Main extends Component {
                 },
                 {
                   id: 'carro-pergunta',
-                  message: 'Tem carro? Se sim, está insatisfeito?',
+                  message: 'Tem carro?',
                   trigger: 'carro',
                 },
                 {
@@ -90,7 +96,7 @@ export default class Main extends Component {
                 },
                 {
                   id: 'saude-odonto-pergunta',
-                  message: 'Tem interesse ou está insatisfeito com seu plano de saúde ou dental😄?',
+                  message: 'Você sabe da importância de um plano de saúde dental?',
                   trigger: 'saude-odonto',
                 },
                 {
@@ -102,7 +108,7 @@ export default class Main extends Component {
                 },
                 {
                   id: 'saudeOdontoEscolha-pergunta',
-                  message: 'Qual deles?',
+                  message: 'Qual das opções abaixo é mais interessante?',
                   trigger: 'saudeOdontoEscolha',
                 },
                 {
@@ -110,7 +116,7 @@ export default class Main extends Component {
                   options: [
                     { value: 1, label: 'Saúde💪', trigger: 'trabalho-pergunta' },
                     { value: 2, label: 'Dental😄', trigger: 'trabalho-pergunta' },
-                    { value: 3, label: 'Ambos', trigger: 'trabalho-pergunta' },
+                    { value: 3, label: 'Ambas', trigger: 'trabalho-pergunta' },
                   ],
                 },
                 {

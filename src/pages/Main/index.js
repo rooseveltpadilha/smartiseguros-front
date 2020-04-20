@@ -5,6 +5,7 @@ import ProfileImage from '../../assets/img/user-profile.png'
 import DivFooter from '../../Components/Footer'
 import EncontreDiv from '../../Components/Encontre'
 
+
 import '../../assets/css/fonts.css'
 
 export default class Main extends Component {
