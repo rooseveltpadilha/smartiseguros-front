@@ -76,7 +76,7 @@ export const Banner = styled.div`
               font-size: 40px;
             `}
         }
-        button {
+        a {
           width: 650px;
           height: 95px;
           background: #8FBE00;
@@ -86,11 +86,13 @@ export const Banner = styled.div`
           padding: 10px;
           margin: 20px 0;
           color: #fff;
+          text-decoration: none;
+          text-align: center;
           ${media.lessThan("medium")`
              width: 465px;
         `}
         }
-        button:hover {
+        a:hover {
           background: #96C700;
         }
 
@@ -100,12 +102,11 @@ export const Banner = styled.div`
 export const Letreiro = styled.div`
   width: 100%;
   height: 250px;
-  max-width: 1200px;
   background: #fff;
-  margin: 0px auto;
   div {
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
     flex-direction: column;
     align-items: center;
     ${media.lessThan("medium")`
@@ -130,5 +131,166 @@ export const Letreiro = styled.div`
       font-size: 26px;
       `}
     }
+  }
+`
+
+export const Video = styled.div`
+  background-color: #EDEDED;
+
+  div {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 300px;
+    ${media.lessThan("large")`
+    justify-content: center;
+    `}
+
+      div {
+        display: flex;
+        width: 490px;
+        min-height: 260px;
+        margin: 40px 20px;
+        align-content: center;
+      }
+
+      div:nth-child(1) {
+        background: #FFFFFF;
+        border-radius: 9px;
+
+        span:first-child {
+          font-family: 'Rubik', sans-serif;
+          font-size: 26px;
+          text-align: right;
+          padding: 50px 40px 30px 40px;
+          color: #000000;
+        }
+
+        span:nth-child(2) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 510px;
+
+
+          img {
+            height: 150px;
+            width: 150px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+          }
+
+          span {
+            width: 250px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding-right: 40px;
+
+            p {
+              font-family: 'Rubik', sans-serif;
+            }
+
+            p:first-child {
+              font-size: 31px;
+            }
+
+            p:nth-child(2) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      div:nth-child(2) {
+        justify-content: center;
+      }
+  }
+`
+
+export const Encontre = styled.div`
+  height: 180px;
+  background: #fff;
+  div {
+    display: flex;
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 40px;
+    margin: 0 auto;
+
+      p {
+        max-width: 1000px;
+        display: block;
+        font-size: 40px;
+        color: #000;
+        font-family: 'Rubik', sans-serif;
+        margin: 0px auto;
+        padding: 16px;
+      ${media.lessThan("large")`
+        font-size: 26px;
+        margin: 0px auto;
+      `}
+
+      }
+    }
+  }
+`
+
+export const Corretor = styled.div`
+  div {
+      display: flex;
+      max-width: 1200px;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 0px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+
+        img {
+          width: 230px;
+          height: 230px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          text-align: center;
+          p:first-child {
+            margin-top: 0px;
+            font-size: 24px;
+            font-family: 'Rubik', sans-serif;
+          }
+        }
+
+      }
+  }
+`
+
+export const Footer = styled.div`
+  margin-top: 40px;
+  background-color: #2B3D52;
+  height: 60px;
+  div {
+      margin: 0 auto;
+      display: flex;
+      max-width: 1200px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        padding-top: 15px;
+        color: #fff
+      }
+      img {
+        margin-top: 8px;
+      }
   }
 `
