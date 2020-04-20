@@ -4,6 +4,7 @@ export const Footer = styled.div`
   margin-top: 40px;
   background-color: #2B3D52;
   height: 60px;
+  padding: 0 20px;
   div {
       margin: 0 auto;
       display: flex;
